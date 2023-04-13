@@ -5,18 +5,14 @@ const baseUrl = 'http://api.weatherapi.com/v1';
 const currentWeatherApiMethod = '/current.json';
 const forecastApiMethod = '/forecast.json';
 
-let currentLocation = 'Sudbury';
+const currentLocation = 'Sudbury';
 
 async function getCurrentWeatherData() {
     const responseData = await fetch(
-        baseUrl +
-            currentWeatherApiMethod +
-            '?key=' +
-            key +
-            '&q=' +
-            currentLocation
+        `${baseUrl + currentWeatherApiMethod}?key=${key}&q=${currentLocation}`
     );
     const responseDataJson = await responseData.json();
+    console.log(responseDataJson);
 }
 
 getCurrentWeatherData();
