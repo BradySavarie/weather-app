@@ -7,5 +7,29 @@
         <title>Weather App</title>
         <script src="./main.js" defer></script>
     </head>
-    <body></body>
+    <body>
+        <div id="content_container">
+            <header>
+                <img src="#" alt="#" id="Logo" />
+                <input
+                    type="search"
+                    id="location_search_input"
+                    name="location_search_input"
+                    placeholder="Enter City Name..."
+                />
+                <button id="location_search_button"></button>
+            </header>
+            <main>
+                <div id="current_weather_container">
+                    <p id="city_name">City: Sudbury</p>
+                    <p id="conditions">Conditions: Cloudy</p>
+                    <p id="temperature">Temperature: 5°</p>
+                    <p id="high_temp">High: 10°</p>
+                    <p id="low_temp">Low: 0°</p>
+                </div>
+                <div id="hourly_forecast_container"></div>
+                <div id="weekly_forecast_container"></div>
+            </main>
+        </div>
+    </body>
 </html>

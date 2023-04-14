@@ -3,5 +3,12 @@ import './styles.css';
 import * as Model from './model';
 import * as View from './view';
 
-Model.getCurrentWeatherData();
+const locationSearchInput = document.getElementById('location_search_input');
+const locationSearchBtn = document.getElementById('location_search_button');
+
+locationSearchBtn.addEventListener('click', () => {
+    const cityName = locationSearchInput.value;
+    Model.getCurrentWeatherData(cityName);
+});
+
 View.test();

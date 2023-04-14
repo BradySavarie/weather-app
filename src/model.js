@@ -3,9 +3,10 @@ const baseUrl = 'http://api.weatherapi.com/v1';
 const currentWeatherApiMethod = '/current.json';
 const forecastApiMethod = '/forecast.json';
 
-const currentLocation = 'Sudbury';
+let currentLocation = 'Sudbury';
 
-export default async function getCurrentWeatherData() {
+export default async function getCurrentWeatherData(cityName) {
+    currentLocation = cityName;
     const responseData = await fetch(
         `${baseUrl + currentWeatherApiMethod}?key=${key}&q=${currentLocation}`
     );
