@@ -1,17 +1,16 @@
 const key = '6565137403ce4116af3205145230904';
 const baseUrl = 'http://api.weatherapi.com/v1';
-const currentWeatherApiMethod = '/current.json';
 const forecastApiMethod = '/forecast.json';
 
 let currentLocation = 'Sudbury';
 
-export default async function getCurrentWeatherData(cityName) {
+export default async function getWeatherData(cityName) {
     currentLocation = cityName;
     const responseData = await fetch(
-        `${baseUrl + currentWeatherApiMethod}?key=${key}&q=${currentLocation}`
+        `${baseUrl + forecastApiMethod}?key=${key}&q=${currentLocation}&days=7`
     );
     const responseDataJson = await responseData.json();
     console.log(responseDataJson);
 }
 
-export { getCurrentWeatherData };
+export { getWeatherData };

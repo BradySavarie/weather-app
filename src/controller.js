@@ -9,13 +9,13 @@ const locationSearchBtn = document.getElementById('location_search_button');
 document.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         const cityName = locationSearchInput.value;
-        Model.getCurrentWeatherData(cityName);
+        Model.getWeatherData(cityName);
     }
 });
 
 locationSearchBtn.addEventListener('click', () => {
     const cityName = locationSearchInput.value;
-    Model.getCurrentWeatherData(cityName);
+    Model.getWeatherData(cityName);
 });
 
 View.test();
