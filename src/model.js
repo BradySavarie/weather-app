@@ -30,7 +30,7 @@ export default async function getWeatherData(cityName) {
     const responseDataJson = await responseData.json();
     console.log(responseDataJson);
     const currentLocation = new LocationData(responseDataJson);
-    console.log(currentLocation);
+    return currentLocation;
 }
 
 export { getWeatherData };

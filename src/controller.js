@@ -14,7 +14,8 @@ document.addEventListener('keypress', (e) => {
 
 locationSearchBtn.addEventListener('click', () => {
     const cityName = locationSearchInput.value;
-    Model.getWeatherData(cityName);
+    const currentWeatherData = Model.getWeatherData(cityName);
+    currentWeatherData.then((data) => {
+        View.renderCurrentWeather(data);
+    });
 });
-
-View.test();
