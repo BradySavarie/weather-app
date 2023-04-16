@@ -1,27 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import 'components.scss';
+
+$primary-font-family: 'Outfit', sans-serif;
+$orange: #ef6c00;
+$teal: #26a69a;
+$yellow: #ffa726;
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
+    font-family: $primary-font-family;
 }
 
 .content_container {
     width: 100vw;
     height: 100vh;
-    outline: 1px solid black;
 }
 
 .header {
-    width: 100vw;
-    padding: 10px;
-    outline: 1px solid black;
+    padding: 5px 20px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
 .logo_container {
     display: flex;
     align-items: center;
+}
+
+.logo_text {
+    font-size: 1.75rem;
+    font-weight: 600;
 }
