@@ -5,8 +5,8 @@ $yellow: #ffa726;
 // Toggle Switch
 
 .toggle {
-    --width: 80px;
-    --height: calc(var(--width) / 3);
+    --width: 60px;
+    --height: calc(80px / 3);
 
     position: relative;
     display: inline-block;
@@ -54,7 +54,7 @@ $yellow: #ffa726;
 
 .toggle .labels {
     position: absolute;
-    top: 8px;
+    top: 7px;
     left: 0;
     width: 100%;
     height: 100%;
