@@ -14,15 +14,17 @@
                     <img src="./img/logo.svg" alt="" style="height: 100px" />
                     <p class="logo_text">Weather App</p>
                 </div>
-                <div class="location_search_container">
+                <form role="search" id="location_search_form">
+                    <label for="search"></label>
                     <input
+                        id="search"
                         type="search"
-                        id="location_search_input"
-                        name="location_search_input"
-                        placeholder="Enter City Name..."
+                        placeholder="City Name..."
+                        autofocus
+                        required
                     />
-                    <button id="location_search_button"></button>
-                </div>
+                    <button type="submit">Go</button>
+                </form>
                 <label class="toggle">
                     <input type="checkbox" />
                     <span class="slider"></span>

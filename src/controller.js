@@ -2,21 +2,11 @@ import './styles.scss';
 import * as Model from './model';
 import * as View from './view';
 
-const locationSearchInput = document.getElementById('location_search_input');
-const locationSearchBtn = document.getElementById('location_search_button');
+const locationSearchForm = document.getElementById('location_search_form');
 
-document.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        const cityName = locationSearchInput.value;
-        const currentWeatherData = Model.getWeatherData(cityName);
-        currentWeatherData.then((data) => {
-            View.renderCurrentWeather(data);
-        });
-    }
-});
-
-locationSearchBtn.addEventListener('click', () => {
-    const cityName = locationSearchInput.value;
+locationSearchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const cityName = e.target[0].value;
     const currentWeatherData = Model.getWeatherData(cityName);
     currentWeatherData.then((data) => {
         View.renderCurrentWeather(data);
