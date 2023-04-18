@@ -16,8 +16,18 @@ locationSearchForm.addEventListener('submit', (e) => {
 });
 
 tempToggle.addEventListener('change', () => {
-    const cityName = searchInput.value;
+    let cityName = searchInput.value;
+    if (cityName === '') {
+        cityName = 'Sudbury';
+    }
     const currentWeatherData = Model.getWeatherData(cityName);
+    currentWeatherData.then((data) => {
+        View.renderCurrentWeather(data);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentWeatherData = Model.getWeatherData('Sudbury');
     currentWeatherData.then((data) => {
         View.renderCurrentWeather(data);
     });

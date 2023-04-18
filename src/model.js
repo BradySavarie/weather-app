@@ -28,7 +28,6 @@ export default async function getWeatherData(cityName) {
         `${baseUrl + forecastApiMethod}?key=${key}&q=${cityName}&days=7`
     );
     const responseDataJson = await responseData.json();
-    console.log(responseDataJson);
     const currentLocation = new LocationData(responseDataJson);
     return currentLocation;
 }
