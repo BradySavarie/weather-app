@@ -1,3 +1,5 @@
+const tempToggle = document.getElementById('temp_toggle');
+
 export default function renderCurrentWeather(data) {
     const cityName = document.getElementById('city_name');
     const currentCondition = document.getElementById('current_condition');
@@ -7,11 +9,16 @@ export default function renderCurrentWeather(data) {
 
     cityName.textContent = data.cityName;
     currentCondition.textContent = data.currentCondition;
-    currentTemp.textContent = data.currentTempCelcius;
-    highTemp.textContent = data.highTempCelcius;
-    lowTemp.textContent = data.lowTempCelcius;
 
-    console.log(data);
+    if (tempToggle.checked) {
+        currentTemp.textContent = data.currentTempCelcius;
+        highTemp.textContent = data.highTempCelcius;
+        lowTemp.textContent = data.lowTempCelcius;
+    } else {
+        currentTemp.textContent = data.currentTempFahrenheit;
+        highTemp.textContent = data.highTempFahrenheit;
+        lowTemp.textContent = data.lowTempFahrenheit;
+    }
 }
 
 export { renderCurrentWeather };

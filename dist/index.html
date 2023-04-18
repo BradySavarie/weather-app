@@ -26,39 +26,37 @@
                     <button type="submit">Go</button>
                 </form>
                 <label class="toggle">
-                    <input type="checkbox" />
+                    <input type="checkbox" id="temp_toggle" checked />
                     <span class="slider"></span>
                     <span class="labels" data-c="C" data-f="F"></span>
                 </label>
             </header>
             <main>
                 <section id="current_weather_container">
-                    <h2>Current Weather</h2>
-                    <ul>
-                        <li>
-                            <strong>City: </strong
-                            ><span id="city_name">Sudbury</span>
-                        </li>
-                        <li>
-                            <strong>Condition: </strong
-                            ><span id="current_condition">Cloudy</span>
-                        </li>
-                        <li>
-                            <strong>Temperature: </strong
-                            ><span id="current_temp">5</span>°
-                        </li>
-                        <li>
-                            <strong>High: </strong
-                            ><span id="high_temp">10</span>°
-                        </li>
-                        <li>
-                            <strong>Low: </strong><span id="low_temp">0</span>°
-                        </li>
-                    </ul>
+                    <h2 class="current_weather_header">Current Weather</h2>
+                    <div class="weather_data">
+                        <p class="city_name" id="city_name">Sudbury</p>
+                        <p class="condition" id="current_condition">Cloudy</p>
+                        <div class="temp_container">
+                            <p class="current_temp" id="current_temp">5</p>
+                            <span>°</span>
+                        </div>
+                        <div class="temp_range">
+                            <div class="temp_container">
+                                <p class="high_temp" id="high_temp">
+                                    <span>High: </span>10
+                                </p>
+                                <span>°</span>
+                            </div>
+                            <div class="temp_container">
+                                <p class="low_temp" id="low_temp">
+                                    <span>Low: </span>0
+                                </p>
+                                <span>°</span>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-
-                <div id="hourly_forecast_container"></div>
-                <div id="weekly_forecast_container"></div>
             </main>
         </div>
     </body>
