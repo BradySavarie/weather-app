@@ -1,5 +1,5 @@
 const key = '6565137403ce4116af3205145230904';
-const baseUrl = 'http://api.weatherapi.com/v1';
+const baseUrl = 'https://api.weatherapi.com/v1';
 const forecastApiMethod = '/forecast.json';
 
 class LocationData {
