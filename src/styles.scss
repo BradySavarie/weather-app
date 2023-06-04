@@ -2,7 +2,7 @@
 @import 'components.scss';
 
 $primary-font-family: 'Outfit', sans-serif;
-$orange: #ef6c00;
+$orange: rgb(239, 108, 0);
 $shadow-large: 0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
 $rad: 0.7rem;
@@ -41,7 +41,11 @@ body {
 }
 
 main {
-    background-image: url(./img/background.jpg);
+    background: linear-gradient(
+        to top,
+        rgba(239, 108, 0, 0.5),
+        rgba(38, 166, 154, 0.5)
+    );
     background-size: cover;
     height: 85%;
     display: flex;
